@@ -10,4 +10,22 @@
 
 # write a function that takes the year as the input and produces the Zodiac for that year
 # output should be in the format "2000 is the year of the Fire Rat"
+chinese_dict= {
+    'animals': ["Rat","Ox","Tiger","Rabbit","Dragon","Snake","Horse","Goat","Monkey","Rooster","Dog","Pig"],
+    'elements': ["Fire", "Earth", "Metal", "Water", "Wood"]
+}
+year=2000
+def chinese_new_year(x):
+    x = int(x)
+    year = (x-2000) % 60
+    result=[]
+    for element in chinese_dict["elements"]:
+        for animal in chinese_dict["animals"]:
+            order = f"{element} {animal}"
+            result.append(order)
+    Zodiac = result[year]
+    Messege= f"{x} is the year of the {Zodiac}"
+    return Messege
 
+Zodiac = chinese_new_year(2000)
+print(Zodiac)
