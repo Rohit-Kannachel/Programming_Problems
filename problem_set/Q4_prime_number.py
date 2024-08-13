@@ -33,5 +33,5 @@ def prime_number_solver(number):
     else:
         print(f"{number} is prime!")
         return True
-x=prime_number_solver(49)
+x=prime_number_solver(number)
 print(x)
