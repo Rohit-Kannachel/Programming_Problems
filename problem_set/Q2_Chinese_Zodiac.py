@@ -16,6 +16,10 @@ chinese_dict= {
 }
 year=2000
 def chinese_new_year(x):
+    """
+    With an inputted year, the function will determine the CHinese Zodiac associated with that year
+    in a initialized cycle.
+    """
     x = int(x)
     year = (x-2024) % 60
     result=[]

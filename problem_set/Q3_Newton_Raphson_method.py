@@ -14,7 +14,7 @@ import math
 ## Tool 1
 def function_x(x):
     ##define the function you're using
-    y= math.sin(x)
+    y= x**2 - 2
     return y
 # print(newton_rahpson(math.pi/2))
 
@@ -55,7 +55,7 @@ def function_x(x):
 
 def derivative_of_f(x):
     ##define the derivative of the fuction you input before
-    y_prime= math.cos(x)
+    y_prime= 2*(x)
     return y_prime
 
 
@@ -77,9 +77,14 @@ def derivative_of_f(x):
 # ## Newton_Raphson_method
 ## xn+1 = xn - f(x)/f'(x)
 def newton_rahpson(guess: int):
+    """
+    This function uses a parent and derivative to approximate a root given an initial guess. To a certain error.
+    """
     y = 1
     while abs(y) > .000001:
         next_guess = guess - (function_x(guess)/derivative_of_f(guess))
         guess=next_guess
         y = function_x(next_guess)
     return next_guess
+
+print(newton_rahpson(5))

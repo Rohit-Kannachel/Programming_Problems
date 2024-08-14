@@ -10,6 +10,10 @@ number = 107352437281
 # At the least, do not check even numbers
 
 def prime_number_solver(number):
+    """
+    This function takes an input number and tests if it's prime or composite.
+    Outputs True or False respectfully.
+    """
     divisor = 3
     sqrt_number = number**.5
     compute = 0
@@ -33,5 +37,5 @@ def prime_number_solver(number):
     else:
         print(f"{number} is prime!")
         return True
-x=prime_number_solver(number)
+x = prime_number_solver(number)
 print(x)
