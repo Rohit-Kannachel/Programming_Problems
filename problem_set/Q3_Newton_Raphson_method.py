@@ -13,7 +13,9 @@ import math
 ### write comments and code here ###
 ## Tool 1
 def function_x(x):
-    ##define the function you're using
+    """
+    Define the Parent Function
+    """
     y= x**2 - 2
     return y
 # print(newton_rahpson(math.pi/2))
@@ -54,7 +56,9 @@ def function_x(x):
 # ## Tool 2
 
 def derivative_of_f(x):
-    ##define the derivative of the fuction you input before
+    """
+    Define the derivative of the parent function
+    """
     y_prime= 2*(x)
     return y_prime
 
@@ -73,12 +77,16 @@ def derivative_of_f(x):
 #         print("The derivative is: 2x")
 #     return b
 # QuadraticDerivative(b)
+
+
 # # Run the algorithm for the necessary amount of iterations to converge to 6 d.p. accuracy, make sure to start with a good initial guess
 # ## Newton_Raphson_method
 ## xn+1 = xn - f(x)/f'(x)
+
 def newton_rahpson(guess: int):
     """
-    This function uses a parent and derivative to approximate a root given an initial guess. To a certain error.
+    This function uses a parent and derivative to approximate a root given an initial guess.
+    It is specified to a certain error.
     """
     y = 1
     while abs(y) > .000001:
@@ -88,3 +96,4 @@ def newton_rahpson(guess: int):
     return next_guess
 
 print(newton_rahpson(5))
+print(f"True Value: {true_value}")
