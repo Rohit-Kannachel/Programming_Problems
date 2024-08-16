@@ -16,8 +16,14 @@ chinese_dict= {
 }
 year=2000
 def chinese_new_year(x):
+    """
+    Takes a inputted year, and output what Chinese Zodiac is for that year
+    """
     x = int(x)
+    # Initialized for 2024 and cycles through the total 60 states the Zodiac may be.
+    ## It is aligned with the index numbers of the list
     year = (x-2024) % 60
+
     result=[]
     for element in chinese_dict["elements"]:
         for animal in chinese_dict["animals"]:
